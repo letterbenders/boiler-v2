@@ -27,13 +27,7 @@ module.exports = function(grunt){
 				} //options
 			} //dev
 		}, // compass
-		sass: {
-			dist: {
-		    	files: {
-		          'dist/css/build.min.css': ['src/sass/build.scss']
-		        }
-		    } // dist
-		}, // sass
+		
 		watch: {
 			options: {
 			    livereload: true,
@@ -49,6 +43,9 @@ module.exports = function(grunt){
 			html: {
 				files: ['*.html']
 			}, // html
+			php: {
+				files: ['*.php']
+			}, // php
 			css: {
 				files: '**/*.scss',
 				tasks: ['compass:dev']
@@ -58,7 +55,6 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-compass');
-	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 
 	grunt.registerTask('default', ['watch']);
