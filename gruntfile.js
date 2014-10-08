@@ -20,14 +20,17 @@ module.exports = function(grunt){
 		        }
 		    } // dist
 		},
-		compass: {
-			dev: {
-				options: {
-					config: 'config.rb'
-				} //options
-			} //dev
-		}, // compass
 		
+		compass: {
+			dist: {
+				options: {
+					sassDir: 'src/sass',
+					cssDir: 'dist/css',
+					outputStyle: 'compressed'
+				}
+			}
+		},
+
 		watch: {
 			options: {
 			    livereload: true,
@@ -47,8 +50,10 @@ module.exports = function(grunt){
 				files: ['**/*.php']
 			}, // php
 			css: {
-				files: '**/*.scss',
-				tasks: ['compass:dev']
+				files: ['src/**/*.scss'],
+				tasks: [
+					'compass'
+				]
 			} //css
 		} //watch
 	}) //initConfig
