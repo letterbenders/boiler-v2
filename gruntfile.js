@@ -2,16 +2,23 @@ module.exports = function(grunt){
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 
+		concat: {
+		      dist: {
+		        src: ['src/js/modules/*.js', 'src/bootstrap/javascripts/bootstrap.js'],
+		        dest: 'src/js/build.js',
+		      } //dist
+		}, //concat
+
 		uglify: {
 			options: {
 		      banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
 		        '<%= grunt.template.today("yyyy-mm-dd") %> */'
 		    },
-		    my_target: {
-		      files: {
-		        'dist/js/build.min.js': ['src/js/*.js', 'src/bootstrap/javascripts/bootstrap.js' ]
-		      }
-		    }
+		    dist: {
+		    	files: {
+		          'dist/js/build.min.js': ['src/js/build.js']
+		        }
+		    } // dist
 		},
 		compass: {
 			dev: {
@@ -31,8 +38,12 @@ module.exports = function(grunt){
 			options: {
 			    livereload: true,
     		},
+    		joinjs: {
+    			files: ['src/js/modules/*.js', 'src/bootstrap/javascripts/bootstrap.js'],
+				tasks: ['concat']
+			}, 
     		scripts: {
-    			files: ['src/js/*.js'],
+    			files: ['src/js/build.js'],
 				tasks: ['uglify']
 			}, //scripts
 			html: {
@@ -48,6 +59,7 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-compass');
 	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-contrib-concat');
 
 	grunt.registerTask('default', ['watch']);
 	
