@@ -25,6 +25,7 @@ module.exports = function(grunt){
 			    livereload: true,
     		},
     		scripts: {
+    			files: ['src/js/*.js'],
 				tasks: ['uglify']
 			}, //scripts
 			html: {
