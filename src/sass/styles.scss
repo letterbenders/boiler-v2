@@ -1,5 +1,5 @@
-$myColor: #222;
+@import 'modules/header';
+@import 'modules/hero';
+@import 'modules/nav';
 
-body{
-	background: $myColor;
-}
+@import '../bootstrap/stylesheets/bootstrap';

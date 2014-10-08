@@ -1,3 +1,3 @@
 function other () {
-	return "other";
+	return "other one";
 }
