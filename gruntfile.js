@@ -3,7 +3,7 @@ module.exports = function(grunt){
 		pkg: grunt.file.readJSON('package.json'),
 
 		concat: {
-		      dist: {
+			dist: {
 		        src: ['src/js/modules/*.js', 'src/bootstrap/javascripts/bootstrap.js'],
 		        dest: 'src/js/build.js',
 		      } //dist
@@ -29,10 +29,10 @@ module.exports = function(grunt){
 		}, // compass
 		sass: {
 			dist: {
-				files: {
-					'dist/css/build.min.css' : 'src/sass/styles.scss'
-				} // files
-			} // dist
+		    	files: {
+		          'dist/css/build.min.css': ['src/sass/build.scss']
+		        }
+		    } // dist
 		}, // sass
 		watch: {
 			options: {
@@ -51,7 +51,7 @@ module.exports = function(grunt){
 			}, // html
 			css: {
 				files: '**/*.scss',
-				tasks: ['sass']
+				tasks: ['compass:dev']
 			} //css
 		} //watch
 	}) //initConfig
