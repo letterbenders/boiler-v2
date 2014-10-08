@@ -9,7 +9,7 @@ module.exports = function(grunt){
 		    },
 		    my_target: {
 		      files: {
-		        'build/js/scripts.min.js': ['src/js/*.js', 'src/bootstrap/javascripts/bootstrap.js' ]
+		        'dist/js/build.min.js': ['src/js/*.js', 'src/bootstrap/javascripts/bootstrap.js' ]
 		      }
 		    }
 		},
@@ -23,7 +23,7 @@ module.exports = function(grunt){
 		sass: {
 			dist: {
 				files: {
-					'build/css/style.min.css' : 'src/sass/styles.scss'
+					'dist/css/build.min.css' : 'src/sass/styles.scss'
 				} // files
 			} // dist
 		}, // sass

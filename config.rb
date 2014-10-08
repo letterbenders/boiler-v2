@@ -1,6 +1,6 @@
 # Compass
 
-css_dir = 'build/css'
+css_dir = 'dist/css'
 sass_dir = 'src/sass'
-javascript_dir = 'build/js'
-output_style = :nested
+javascript_dir = 'dist/js'
+output_style = :compressed
