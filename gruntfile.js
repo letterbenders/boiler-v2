@@ -9,7 +9,7 @@ module.exports = function(grunt){
 		    },
 		    my_target: {
 		      files: {
-		        'build/js/output.min.js': ['src/js/*.js']
+		        'build/js/scripts.min.js': ['src/js/*.js']
 		      }
 		    }
 		},
