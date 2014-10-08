@@ -44,7 +44,7 @@ module.exports = function(grunt){
 				files: ['*.html']
 			}, // html
 			php: {
-				files: ['*.php']
+				files: ['**/*.php']
 			}, // php
 			css: {
 				files: '**/*.scss',
