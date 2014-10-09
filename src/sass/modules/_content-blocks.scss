@@ -5,6 +5,22 @@
           border-radius: $radius;
 }
 
+
+// classes
+
+.block-header{
+	&:first-child{
+		margin-top:0;
+	}	
+}
+
+.block-subheader{
+	color:$gray-light;
+	margin-bottom:20px;
+}
+
+// styles
+
 .two-col{
 	
 	.two-col-item{
@@ -46,6 +62,22 @@
 	}
 }
 
+.half{
+	.half__item{
+
+	}
+
+	.half__item--text{
+
+	}
+
+	.half__item--img{
+		img{
+			width:100%;
+		}
+	}
+}
+
 /* Small devices (tablets, 768px and up) */
 @media (min-width: $screen-sm-min) {
 	
@@ -54,7 +86,7 @@
 			margin-top:0px;
 		}	
 	}
-	
+
 	.two-col{
 		.two-col-item{
 			margin-top:0px;
