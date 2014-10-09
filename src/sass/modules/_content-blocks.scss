@@ -6,25 +6,22 @@
 }
 
 
-// classes
-
-.block-header{
-	&:first-child{
-		margin-top:0;
-	}	
-}
-
-.block-subheader{
-	color:$gray-light;
-	margin-bottom:20px;
-}
-
 // styles
 
 .two-col{
 	
-	.two-col-item{
-		margin-top:50px;
+	.two-col__item{
+		margin-top:30px;
+	}
+
+	&__item--text{
+		
+	}
+
+	&__item--img{
+		img{
+			width:100%;
+		}
 	}
 
 	.item__icon{
@@ -35,7 +32,6 @@
 		overflow:hidden;
 		@include border-radius(50%);
 		
-
 		img{
 			max-width:100%;
 		}
@@ -44,7 +40,7 @@
 
 .three-col{
 	
-	.three-col-item{
+	.three-col__item{
 		margin-top:50px;
 	}
 
@@ -62,18 +58,56 @@
 	}
 }
 
-.half{
-	.half__item{
+.halfs{
+	.row {
+    	display: block;
+		
 
+		[class*="col-"] {
+		    display: block;
+		    min-height: 250px;
+		}
+
+		.halfs__col--1-2{
+			background:#3498DB;
+			color: #fff
+		}
+
+		.halfs__col--2-2{
+			background:#222;
+			color:#fff;
+		}	
 	}
 
-	.half__item--text{
+	.halfs__item{
+		padding:8% 12%;
+		
 
-	}
-
-	.half__item--img{
 		img{
-			width:100%;
+			width: 100%;
+		}
+	}
+}
+
+.halfs--red{
+	.row {
+		.halfs__col--1-2{
+			background:#D64541;
+			color: #fff
+		}
+
+		.halfs__col--2-2{
+			background:#222;
+			color:#fff;
+		}	
+	}
+
+	.halfs__item{
+		padding:8% 12%;
+		
+
+		img{
+			width: 100%;
 		}
 	}
 }
@@ -88,8 +122,22 @@
 	}
 
 	.two-col{
-		.two-col-item{
+		.two-col__item{
 			margin-top:0px;
+		}	
+	}
+
+	.halfs{
+		.row {
+	    	display: table;
+			
+
+			[class*="col-"] {
+			    float: none;
+			    display: table-cell;
+			    vertical-align: top;
+
+			}
 		}	
 	}
 }

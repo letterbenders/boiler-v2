@@ -1,7 +1,12 @@
 section{
-	$section-padding:50px;
+	$section-padding:20px;
 	padding-top:$section-padding;
-	padding-bottom:$section-padding;
+	padding-bottom:0px;
+
+	.row{
+		border-bottom:1px solid $gray-lighter;
+		padding-bottom:$section-padding;
+	}
 }
 
 /*.container{
@@ -24,4 +29,42 @@ section{
 
 .no-padding-bottom{
 	padding-bottom:0px !important;
+}
+
+// classes
+
+.block-header{
+	&:first-child{
+		margin-top:0;
+	}	
+}
+
+.block-subheader{
+	color:inherit;
+	margin-bottom:15px;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+	
+	section{
+		$section-padding:50px;
+		padding-top:$section-padding;
+		padding-bottom:$section-padding;
+
+		.row{
+			border-bottom:none;
+			padding-bottom:0px;
+		}
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) {
+
 }
