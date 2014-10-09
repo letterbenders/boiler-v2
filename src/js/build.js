@@ -12,15 +12,15 @@ function other () {
 }
 var glide = $('.slider').glide().data('api_glide');
 
-			$(window).on('keyup', function (key) {
-				if (key.keyCode === 13) {
-					glide.jump(3, console.log('Wooo!'));
-				};
-			});
+$(window).on('keyup', function (key) {
+	if (key.keyCode === 13) {
+		glide.jump(3, console.log('Wooo!'));
+	};
+});
 
-			$('.slider__arrows-item').on('click', function() {
-				console.log(glide.current());
-			});
+$('.slider__arrows-item').on('click', function() {
+	console.log(glide.current());
+});
 /* ========================================================================
  * Bootstrap: affix.js v3.2.0
  * http://getbootstrap.com/javascript/#affix

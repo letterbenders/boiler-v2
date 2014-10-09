@@ -1,4 +1,4 @@
-<section class="hero">
+<section class="hero no-padding">
 <div class="slider">
 	<ul class="slider__wrapper">
 		<li class="slider__item">

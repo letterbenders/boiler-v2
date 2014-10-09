@@ -1,4 +1,4 @@
-<section class="main-nav">
+<section class="main-nav no-padding">
   		<div class="container">
 	  		<div class="row">
 	  			<nav class="navbar navbar-default" role="navigation">

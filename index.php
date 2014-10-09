@@ -6,6 +6,6 @@
 
 <?php include 'modules/hero.php' ?>
 
-<?php include 'modules/page-content.php' ?>
+<?php include 'modules/content-blocks.php' ?>
 
 <?php include 'modules/footer.php' ?>
