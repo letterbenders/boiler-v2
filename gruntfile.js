@@ -4,7 +4,7 @@ module.exports = function(grunt){
 
 		concat: {
 			dist: {
-		        src: ['src/js/modules/*.js', 'src/bootstrap/javascripts/bootstrap.js'],
+		        src: ['src/js/modules/*.js', 'src/bootstrap/assets/javascripts/bootstrap.js'],
 		        dest: 'src/js/build.js',
 		      } //dist
 		}, //concat
@@ -36,7 +36,7 @@ module.exports = function(grunt){
 			    livereload: true,
     		},
     		joinjs: {
-    			files: ['src/js/modules/*.js', 'src/bootstrap/javascripts/bootstrap.js'],
+    			files: ['src/js/modules/*.js', 'src/bootstrap/assets/javascripts/bootstrap.js'],
 				tasks: ['concat']
 			}, 
     		scripts: {
