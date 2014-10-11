@@ -3,12 +3,12 @@
 	<ul class="slider__wrapper">
 		<li class="slider__item">
 			<div class="box">
-				<img src="dist/img/slider_dummy_1.jpg">
+				<img src="dist/img/slider_dummy_2.jpg">
 			</div>
 		</li>
 		<li class="slider__item">
 			<div class="box">
-				<img src="dist/img/slider_dummy_2.jpg">
+				<img src="dist/img/slider_dummy_1.jpg">
 			</div>
 		</li>
 		<li class="slider__item">
